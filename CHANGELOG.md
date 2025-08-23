@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-15)
+## Unreleased (2025-08-23)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`1f159ee`](https://github.com/stdlib-js/stdlib/commit/1f159ee7f00e50c35c89ac61558fde3e64367d58) - **test:** fix test cases for `stats/base/ndarray/*nanmin` [(#7926)](https://github.com/stdlib-js/stdlib/pull/7926) _(by Gururaj Gurram)_
 -   [`9a6ebbf`](https://github.com/stdlib-js/stdlib/commit/9a6ebbf9243a38173a927cef6a5cc71684bc154a) - **feat:** add `stats/base/ndarray/nanmax` [(#7886)](https://github.com/stdlib-js/stdlib/pull/7886) _(by Gururaj Gurram)_
 
 </details>
