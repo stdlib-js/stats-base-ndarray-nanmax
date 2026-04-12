@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,24 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/stats-strided-nanmax' ).ndarray;
-
-
-// MAIN //
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the maximum value of a one-dimensional ndarray, ignoring `NaN` values.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing an input ndarray
-* @returns {number} maximum value
+* @param arrays - array-like object containing an input ndarray
+* @returns maximum value
 *
 * @example
 * var ndarray = require( '@stdlib/ndarray-base-ctor' );
@@ -44,12 +37,9 @@ var strided = require( '@stdlib/stats-strided-nanmax' ).ndarray;
 * var v = nanmax( [ x ] );
 * // returns 2.0
 */
-function nanmax( arrays ) {
-	var x = arrays[ 0 ];
-	return strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-}
+declare function nanmax<T extends ndarray = ndarray>( arrays: [ T ] ): number;
 
 
 // EXPORTS //
 
-module.exports = nanmax;
+export = nanmax;
