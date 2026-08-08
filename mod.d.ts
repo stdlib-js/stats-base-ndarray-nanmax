@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the maximum value of a one-dimensional ndarray, ignoring `NaN` values.
+* Computes the maximum value of a one-dimensional ndarray, ignoring `NaN` values.
 *
-* @module @stdlib/stats-base-ndarray-nanmax
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns maximum value
 *
 * @example
 * var vector = require( '@stdlib/ndarray-vector-ctor' );
-* var nanmax = require( '@stdlib/stats-base-ndarray-nanmax' );
 *
 * var x = vector( [ 1.0, -2.0, NaN, 2.0 ], 'generic' );
 *
 * var v = nanmax( [ x ] );
 * // returns 2.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function nanmax( arrays: [ typedndarray<number> ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = nanmax;
